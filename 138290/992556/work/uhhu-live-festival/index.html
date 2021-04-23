@@ -1,0 +1,792 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <!-- ProSite: basic -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQYHUlBTGwICVFNWAQUC"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function u(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,f=0;s>f;f++)a[f].apply(i,r);var u=c[v[n]];return u&&u.push([w,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return f[t]=f[t]||r(u)}function h(t,e){s(t,function(t,n){e=e||"feature",v[n]=e,e in c||(c[e]=[])})}var m={},v={},w={on:d,emit:u,get:p,listeners:l,context:e,buffer:h};return w}function o(){return new n}var i="nr@context",a=t("gos"),s=t(1),c={},f={},u=e.exports=r();u.backlog=c},{1:24,gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),a.xhrWrappable&&t(4),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=NREUM.o.EV;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").get("events"),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=t("ee").get("history"),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],9:[function(t,e){var n=t("ee").get("raf"),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").get("timer"),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e){e=e||this;var n=i.context(e);e.readyState>3&&!n.resolved&&(n.resolved=!0,i.emit("xhr-resolved",[],e));try{c.inPlace(e,l,"fn-",r)}catch(o){}}function r(t,e){return e}function o(t,e){for(var n in t)e[n]=t[n];return e}var i=t("ee").get("xhr"),a=t(1),s=t(2),c=s(i),f=s(a),u=NREUM.o,d=u.XHR,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout","onreadystatechange"];e.exports=i,window.XMLHttpRequest=function(t){var e=new d(t);try{i.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&f.inPlace(e,["addEventListener","removeEventListener"],"-",r),e.addEventListener("readystatechange",n,!1)}catch(o){try{i.emit("internal-error",[o])}catch(a){}}return e},o(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",r),i.on("send-xhr-start",n),i.on("open-xhr-start",n)},{1:7,2:26,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=n(t,this.lastSize);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var o="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return r(o)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=null,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:15,4:11,5:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],14:[function(t,e){function n(t,e){return function(){r(t,[(new Date).getTime()].concat(i(arguments)),null,e)}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],s=["addPageAction"],c="api-";o(a,function(t,e){newrelic[e]=n(c+e,"api")}),o(s,function(t,e){newrelic[e]=n(c+e)}),e.exports=newrelic,newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),r("err",[t,(new Date).getTime()])}},{1:24,2:25,handle:"D5DuLP"}],15:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n,o){r.buffer([t],o),r.emit(t,e,n)}var r=t("ee").get("handle");e.exports=n,n.ee=r},{ee:"QJf3ax"}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()],null,"api");var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()],null,"api")}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;NREUM.o={ST:setTimeout,XHR:c.XMLHttpRequest,REQ:c.Request,EV:c.Event,PR:c.Promise,MO:c.MutationObserver},t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-885.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()],null,"api");var h=0},{1:24,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</script>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Poster created for Ryerson University for their annual Hip Hop festival" />
+    <meta name="keywords" content="UHHU, live, festival, hip hop, boombox, carving, wood, Ryerson, University, Toronto, Canada, sketches" />
+    <meta name="og:site_name" content="UHHU Live Festival" />
+    <meta name="og:title" content="UHHU Live Festival" />
+    <meta name="og:url" content="http://benjamingehlen.com/138290/992556/work/uhhu-live-festival" />
+    <meta name="og:image" content="https://mir-s3-cdn-cf.behance.net/projects/202/5711651.5468b4259437a.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=1041" />
+    
+    <title>UHHU Live Festival</title>
+
+    <link rel="shortcut icon" href="https://m1.behance.net/profiles16/1768755/prosite/2-0-72ce46428f5bb8ff0b541708d7a6da53.ico?cb=304501056"  />
+<link rel="apple-touch-icon" href="https://m1.behance.net/profiles16/1768755/prosite/2-0-360d737e8693c651451a80b9722f9d53.png?cb=304501056"  />
+<link rel="stylesheet" type="text/css" href="http://m1.prosite.com/min/b=assets/css&amp;f=reset.css,base.css&amp;cb=304501056" />
+<link rel="stylesheet" type="text/css" href="http://m1.prosite.com/min/b=assets/css&amp;f=public-site.css,buttons.css,utils/fancybox.css&amp;cb=304501056" />
+<link rel="stylesheet" type="text/css" href="http://m1.prosite.com/css/templates/basic.css?cb=304501056" />
+<link rel="stylesheet" type="text/css" href="http://09f5b95f07577c3787ac-4700da3968b055c32ff6308a7282a714.r56.cf2.rackcdn.com/1768755-2320596.css?cb=304501056" />
+<script type="text/javascript" src="http://m1.prosite.com/min/b=assets/js&amp;f=jquery/jquery-1.6.2.js,jquery/jquery.fancybox.js,jquery/jquery.scrollTo-1.4.2.js,utils/default.js,public/shared.js,public/default.js,public/stats.js&amp;cb=304501056"></script>
+
+    <script type="text/javascript">
+      var Settings = {
+        'highdef'           : 0,
+        'social'            : {"pinterest":1,"googleplus":1,"twitter":1,"stumbleupon":0,"addthis":0,"linkedin":0,"facebook":1},
+        'appreciation'      : {"images":{"normal":"2-0-c0087573e35189fce1f5a199572c5502.png","hover":"2-0-ce5a4a89d04acd7212240b9878fbc5fd.png","active":"2-0-7d653470fba7ec707bde55769b5da1d3.png","thanks":"2-0-6e28b15d04abe8e166739b983e62fe86.png"},"setting":"global","pages":[]},
+        'show_appreciation' : 1,
+        'user_image_path'   : 'https://m1.behance.net/profiles16/1768755/prosite/',
+        'STAT_URL'          : 'https://www.behance.net/c'
+      };
+
+      // Config already defined in untils/default.js
+      Config.NETWORK_URL    = 'https://www.behance.net';
+      Config.Fotomoto = {
+        'enabled'           : '1',
+        'store_id'          : '062032cf152e331e9c857f0603a6587b2823a420',
+        'affiliate_key'     : '3cf8221311026013',
+        'SCRIPT_URL'        : 'http://widget.fotomoto.com/stores/script/'
+      };
+
+    </script>
+
+    <style type="text/css">
+      html { overflow-y: scroll; } /* always show scrollbar to prevent content-shifting between pages of varying content height*/
+
+            .template-body, #preview-content {
+        -webkit-background-size: 1024px 768px;
+      }
+      
+      .caption-text-wrap{margin:15px
+auto 0px;width:600px}li.old .caption-text-wrap{margin:5px
+auto 0px;width:550px;font-size:11px;line-height:14px;font-family:Arial,Helvetica,sans-serif}#primary-project-content li.old img,#primary-project-content li.old object,#primary-project-content li.old
+embed{margin:0;display:inline}#primary-project-content li.old .text-center{width:550px}#project-modules .module.text ol,#project-modules .module.text
+ul{margin-left:25px}#project-modules .module.text ul
+li{list-style:disc;display:list-item}#project-modules .module.text ol
+li{list-style:decimal;display:list-item}.module-buffer-wrap,.editor-mod.text .editor-text-wrap,#project-modules{width:620px;margin:0px
+auto}#primary-project-content
+.spacer{width:600px;margin:0px
+auto}#primary-project-content
+.divider{position:relative;margin:0
+auto}#primary-project-content .text-center{width:600px;margin:0px
+auto;text-align:left}#primary-project-content
+.module{clear:both}#primary-project-content img,#primary-project-content object,#primary-project-content
+embed{display:block;margin:0px
+auto}#primary-project-content object,#primary-project-content
+embed{z-index:1}.caption-text-width span,.caption-text-width,.editor-text span,.editor-text,.module.text span,.module.text{line-height:1.40em}.divider-wrap{padding:0px
+0px 10px;margin:0px
+auto;width:600px}.editable_audio_wrap{height:32px}.module.image img[height="100%"]{height:auto}.editor-version-3 .module.last
+.divider{display:none} .caption-text-wrap{margin:15px
+auto 0px;width:600px}li.old .caption-text-wrap{margin:5px
+auto 0px;width:550px;font-size:11px;line-height:14px;font-family:Arial,Helvetica,sans-serif}#primary-project-content li.old img,#primary-project-content li.old object,#primary-project-content li.old
+embed{margin:0;display:inline}#primary-project-content li.old .text-center{width:550px}#project-modules .module.text ol,#project-modules .module.text
+ul{margin-left:25px}#project-modules .module.text ul
+li{list-style:disc;display:list-item}#project-modules .module.text ol
+li{list-style:decimal;display:list-item}.module-buffer-wrap,.editor-mod.text .editor-text-wrap,#project-modules{width:620px;margin:0px
+auto}#primary-project-content
+.spacer{width:600px;margin:0px
+auto}#primary-project-content
+.divider{position:relative;margin:0
+auto}#primary-project-content .text-center{width:600px;margin:0px
+auto;text-align:left}#primary-project-content
+.module{clear:both}#primary-project-content img,#primary-project-content object,#primary-project-content
+embed{display:block;margin:0px
+auto}#primary-project-content object,#primary-project-content
+embed{z-index:1}.caption-text-width span,.caption-text-width,.editor-text span,.editor-text,.module.text span,.module.text{line-height:1.40em}.divider-wrap{padding:0px
+0px 10px;margin:0px
+auto;width:600px}.editable_audio_wrap{height:32px}.module.image img[height="100%"]{height:auto}.editor-version-3 .module.last
+.divider{display:none}/* key:project-background */#primary-project-content { padding-top: 0px; background-color: #212121;  }
+
+#primary-project-content{ padding-top: 0px !important; background: none transparent !important; }    </style>
+
+    
+    <!--[if lte IE 6]>
+      <link rel="stylesheet" type="text/css" href="http://m1.prosite.com/css/public/ie6.css" />
+      <script type="text/javascript" src="http://m1.prosite.com/css/iepngfix_tilebg.js"></script>
+    <![endif]-->
+
+    <!--[if lte IE 7]>
+      <script src="http://m1.prosite.com/js/utils/ie/IE7.js"></script>
+      <script src="http://m1.prosite.com/js/utils/ie/ie7-squish.js"></script>
+    <![endif]-->
+
+    <!--[if IE 7]>
+      <link rel="stylesheet" type="text/css" href="http://m1.prosite.com/css/public/ie7.css" />
+    <![endif]-->
+
+    <!--[if IE 8]>
+      <link rel="stylesheet" type="text/css" href="http://m1.prosite.com/css/public/ie8.css" />
+    <![endif]-->
+
+          <!-- Start Google Analytics -->
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          // Track page view for Prosite as a hosting service
+          _gaq.push(['_setAccount', 'UA-1309100-28']);
+          _gaq.push(['_setDomainName', 'prosite.com']);
+          _gaq.push(['_trackPageview']);
+
+            // Track page view for user's domain
+            _gaq.push(['b._setAccount', 'UA-40920050-1']);
+            _gaq.push(['b._setDomainName', window.location.hostname ]);
+            _gaq.push(['b._trackPageview']);
+          
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+      <!-- End Google Analytics -->
+    
+
+      </head>
+    <body class="template-body cfix project-page-992556 template-body-project" net_id="5711651">
+    <!-- primary content -->
+    <div id="site-container" class="template-column cfix centered-website">
+  <div id="nav-primary-container"  class="cfix"><div id="basic-nav-wrap"  class="left template-column template-column-1">
+
+  <div id="basic-nav">
+
+    <div id="basic-logo-wrap">
+    <div id="basic-logo" class="image-optional overflow-hidden">
+<a href="/138290/work"><img src="https://m1.behance.net/profiles16/1768755/prosite/2-2320596-9f66c87fd414de4e32f5c7c143373f4d.png" /></a></div>
+    </div>
+
+    <div id="basic-nav-links-wrapper">
+
+
+
+
+  <ul id="basic-nav-links" class="nav-links">
+  <li class="page">
+<div class="nav-link-container nav-link-projects-parent">
+  <a href="/138290/work"  class="nav-link selected has-link-image"><img src="https://m1.behance.net/profiles16/1768755/prosite/2-2320596-b209ecce75feaadd4955757c23df0c4a.png" class="link-image link-image-off" /><img src="https://m1.behance.net/profiles16/1768755/prosite/2-2320596-81a8ae1ca976c6a2a55c1ee2aeb9ce79.png" class="link-image link-image-hover" /><img src="https://m1.behance.net/profiles16/1768755/prosite/2-2320596-09c2ac5f6108768ebab17e3f064a8173.png" class="link-image link-image-selected" /></a></div>
+<div class="nav-project-links-container">
+  <ul class="nav-project-links nav-project-links-list">
+<li  page_id="138290" class="page page-work page-138290 first-child nav-project">
+<div class="nav-project-link-container">
+  <a href="/138290/5015087/work/wendy-benjamin"  class="nav-project-link">Wendy & Benjamin</a>
+</div>
+</li><li  page_id="138290" class="page page-work page-138290 first-child nav-project">
+<div class="nav-project-link-container">
+  <a href="/138290/5765697/work/my-branding"  class="nav-project-link">My Branding</a>
+</div>
+</li><li  page_id="138290" class="page page-work page-138290 first-child nav-project">
+<div class="nav-project-link-container">
+  <a href="/138290/992546/work/my-logo-collection"  class="nav-project-link">My Logo Collection</a>
+</div>
+</li><li  page_id="138290" class="page page-work page-138290 first-child nav-project">
+<div class="nav-project-link-container">
+  <a href="/138290/992553/work/susan-toyne-branding"  class="nav-project-link">Susan Toyne Branding</a>
+</div>
+</li><li  page_id="138290" class="page page-work page-138290 first-child nav-project">
+<div class="nav-project-link-container">
+  <a href="/138290/992552/work/maria-brooks-branding"  class="nav-project-link">Maria Brooks Branding</a>
+</div>
+</li><li  page_id="138290" class="page page-work page-138290 first-child nav-project">
+<div class="nav-project-link-container">
+  <a href="/138290/992551/work/dd-branding"  class="nav-project-link">D.D. Branding</a>
+</div>
+</li><li  page_id="138290" class="page page-work page-138290 first-child nav-project">
+<div class="nav-project-link-container">
+  <a href="/138290/992549/work/rlp-johnston-daniel-division-brokerage"  class="nav-project-link">RLP Johnston & Daniel Division, Brokerage</a>
+</div>
+</li><li  page_id="138290" class="page page-work page-138290 first-child nav-project">
+<div class="nav-project-link-container">
+  <a href="/138290/3718014/work/the-fit-perspective"  class="nav-project-link">The Fit Perspective</a>
+</div>
+</li><li  page_id="138290" class="page page-work page-138290 first-child nav-project">
+<div class="nav-project-link-container">
+  <a href="/138290/1128544/work/my-logo"  class="nav-project-link">My Logo</a>
+</div>
+</li><li  page_id="138290" class="page page-work page-138290 first-child nav-project">
+<div class="nav-project-link-container">
+  <a href="/138290/6276391/work/alexandre"  class="nav-project-link">Alexandre</a>
+</div>
+</li><li  page_id="138290" class="page page-work page-138290 first-child nav-project">
+<div class="nav-project-link-container">
+  <a href="/138290/992550/work/suzy-armanini"  class="nav-project-link">Suzy Armanini</a>
+</div>
+</li><li  page_id="138290" class="page page-work page-138290 first-child nav-project">
+<div class="nav-project-link-container">
+  <a href="/138290/992554/work/toronto-snow-globe"  class="nav-project-link">Toronto Snow Globe</a>
+</div>
+</li><li  page_id="138290" class="page page-work page-138290 first-child nav-project">
+<div class="nav-project-link-container">
+  <a href="/138290/992548/work/or-real-estate"  class="nav-project-link">OR Real Estate</a>
+</div>
+</li><li  page_id="138290" class="page page-work page-138290 first-child nav-project">
+<div class="nav-project-link-container">
+  <a href="/138290/992556/work/uhhu-live-festival"  class="nav-project-link selected">UHHU Live Festival</a>
+</div>
+</li><li  page_id="138290" class="page page-work page-138290 first-child nav-project">
+<div class="nav-project-link-container">
+  <a href="/138290/992555/work/cj-realty-corp"  class="nav-project-link">CJ Realty Corp</a>
+</div>
+</li><li  page_id="138290" class="page page-work page-138290 first-child nav-project">
+<div class="nav-project-link-container">
+  <a href="/138290/992547/work/kim-valberg"  class="nav-project-link">Kim Valberg</a>
+</div>
+</li>  </ul>
+</div>
+</li>
+<li  page_id="138292" class="page page-custom page-138292">
+
+  <div class="nav-link-container">
+  <a href="/138292/photography"  class="nav-link has-link-image"><img src="https://m1.behance.net/profiles16/1768755/prosite/2-2320596-7869d85a5620ecebbf2ba5c0d97c9189.png" class="link-image link-image-off" /><img src="https://m1.behance.net/profiles16/1768755/prosite/2-2320596-e0616d95b9ea637e559d0551496df4c8.png" class="link-image link-image-hover" /><img src="https://m1.behance.net/profiles16/1768755/prosite/2-2320596-7b09bc30809b06afda82fe5691a29334.png" class="link-image link-image-selected" /></a></div></li>
+
+<li  page_id="138294" class="page page-custom page-138294">
+
+  <div class="nav-link-container">
+  <a href="/138294/miscellaneous"  class="nav-link has-link-image"><img src="https://m1.behance.net/profiles16/1768755/prosite/2-2320596-406f56cbbcb0679e68f7f87bc00ca116.png" class="link-image link-image-off" /><img src="https://m1.behance.net/profiles16/1768755/prosite/2-2320596-31fb06c127c8a84031eb318ace03ab4e.png" class="link-image link-image-hover" /><img src="https://m1.behance.net/profiles16/1768755/prosite/2-2320596-e48c20750fd5770fe46ee29db6acbfae.png" class="link-image link-image-selected" /></a></div></li>
+
+<li  page_id="425042" class="page page-link page-425042 last-child">
+
+  <div class="nav-link-container">
+  <a href="https://benjamingehlen.wufoo.com/forms/contact-me/"  class="nav-link has-link-image" target="_blank"><img src="https://m1.behance.net/profiles16/1768755/prosite/2-2320596-50e68146431a8227927919d8ee2d3cbc.png" class="link-image link-image-off" /><img src="https://m1.behance.net/profiles16/1768755/prosite/2-2320596-e93c67c43878f513dbf2f06b0e3157d6.png" class="link-image link-image-hover" /><img src="https://m1.behance.net/profiles16/1768755/prosite/2-2320596-bc6363631a74267da0d85303fabafec8.png" class="link-image link-image-selected" /></a></div></li>
+<!-- page links are appended to this element -->
+</ul> <!-- #basic-nav-links -->
+
+</div>
+
+  </div> <!-- #basic-nav -->
+
+</div> <!-- #basic-nav-wrap -->
+<div id="primary-content-wrap"  class="left template-column template-column-2">
+
+  <div id="primary-content">
+    <div id="footer-project-project-info-container"  class="cfix">
+<div id="basic-project-info" class="template-column cfix">
+
+
+<div id="basic-project-info-header" class="cfix">
+  <div class="project-view-title">UHHU Live Festival</div>
+  <div class="project-extra-container">
+    <div class="project-view-published-date">2012</div>
+    <div class="project-view-creative-fields">Art Direction, Graphic Design, Print Design</div>
+  </div>
+</div> <!-- #basic-project-info-header -->
+
+<div class="project-view-description-container cfix">
+  <div class="project-view-description-margins template-column cfix">
+    <div class="project-view-description">Poster created for Ryerson University for their annual Hip Hop festival</div>
+  </div>
+</div> <!-- .project-view-description-container -->
+
+
+</div>
+<div class="project-container content-left-aligned" id="basic-project-container">
+  <div id="primary-project-content" class="project-styles"><ul id="project-modules" class="editor-modules-version-5" style="background-color: transparent;">
+<li class="module text first" id="module-44819111">
+<div class="text-center"><div class="main-text"><div><span class="caption"><span><span class="title">UHHU Live Festival</span></span><br>Poster Design<br></span></div></div></div>
+<div class="spacer"><div class="divider thin" style="top: 50%;"></div></div>
+</li>
+<li class="module image" id="module-174383961">
+<img class="source_avail fs_avail hd_avail" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/a692d25711651.56358bf554195.jpg" width="750" height="1031" data-hd-src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/a692d25711651.56358bf554195.jpg"><div class="spacer"><div class="divider thin" style="top: 50%;"></div></div>
+</li>
+<li class="module image" id="module-65525847">
+<img class="source_avail fs_avail hd_avail" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/0c69095711651.560c2e640b799.jpg" width="750" height="498" data-hd-src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/0c69095711651.560c2e640b799.jpg"><div class="spacer"><div class="divider thin" style="top: 50%;"></div></div>
+</li>
+<li class="module image" id="module-65525849">
+<img class="source_avail fs_avail hd_avail" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/6242905711651.560c2d7a6cf99.jpg" width="750" height="498" data-hd-src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/6242905711651.560c2d7a6cf99.jpg"><div class="spacer"><div class="divider thin" style="top: 50%;"></div></div>
+</li>
+<li class="module image" id="module-65525851">
+<img class="source_avail fs_avail hd_avail" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/4eef015711651.560c2dec82b6c.jpg" width="750" height="498" data-hd-src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/4eef015711651.560c2dec82b6c.jpg"><div class="spacer"><div class="divider thin" style="top: 50%;"></div></div>
+</li>
+<li class="module image" id="module-65525853">
+<img class="source_avail fs_avail hd_avail" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/1bfdd45711651.560c2e04932de.jpg" width="750" height="1120" data-hd-src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/1bfdd45711651.560c2e04932de.jpg"><div class="spacer"><div class="divider thin" style="top: 50%;"></div></div>
+</li>
+<li class="module image" id="module-65525855">
+<img class="source_avail fs_avail hd_avail" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/b6ed585711651.560c2d426ad5e.jpg" width="750" height="498" data-hd-src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/b6ed585711651.560c2d426ad5e.jpg"><div class="spacer"><div class="divider thin" style="top: 50%;"></div></div>
+</li>
+<li class="module image" id="module-65525857">
+<img class="source_avail fs_avail hd_avail" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/cd4c025711651.560c2d424063e.jpg" width="750" height="469" data-hd-src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/cd4c025711651.560c2d424063e.jpg"><div class="spacer"><div class="divider thin" style="top: 50%;"></div></div>
+</li>
+<li class="module image last" id="module-65525859">
+<img class="source_avail fs_avail hd_avail" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/04ee805711651.560c2e02c0bd3.jpg" width="750" height="502" data-hd-src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/04ee805711651.560c2e02c0bd3.jpg"><div class="spacer"><div class="divider thin" style="top: 50%;"></div></div>
+</li>
+</ul></div></div>
+
+<div id="below-project"></div>
+
+<div id="basic-project-appreciation-container">
+  <div id="project-appreciation-container" class="show">
+  <div id="appreciation-sticker" selectable="no" class="icon-project-appreciate"></div></div></div>
+
+<div id="below-appreciation"></div>
+
+<div class="social-container cfix">
+    <div id="social-container">
+  <div class="addthis_toolbox">
+    <div class="custom_images cfix">
+
+      <a href="javascript:void((function(){var e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)})());" class="left"><span class="left viral-button viral-button-pinterest social-elements"></span></a>
+<a class="addthis_button_google_plusone left" g:plusone:size="medium" g:plusone:count="false"><span class="social-elements viral-button viral-button-googleplus">Google+</span></a>
+
+
+<a class="addthis_button_twitter left"><span class="social-elements viral-button viral-button-twitter">Twitter</span></a>
+  <div class="facebook-like-container left"><iframe id="facebook-like" class="left" src="http://www.facebook.com/plugins/like.php?href=http://benjamingehlen.com/138290/992556/work/uhhu-live-festival&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;locale=en_US" scrolling="no" height="20" width="140" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden;" lang="en"></iframe></div>
+
+
+
+    </div>
+  </div>
+</div>
+  </div>
+
+
+<div id="back-to-top-container">
+
+
+<div id="back-to-top-inner">
+  <a id="back-to-top-link" href="#top">
+    BACK TO TOP &uarr;
+  </a>
+</div> <!-- #back-to-top-inner -->
+
+
+</div>
+
+<div id="below-backtotop"></div>
+
+<!-- the following cfix is to cure collapsing margins -->
+<div class="cfix"></div>
+
+<div id="basic-projects-thumbnails-container" class="cfix">
+<ul id="basic-projects-thumbnails" class="project-list cfix expandable">
+  <li id="project-cover-5015087" class="left project-cover project-cover-5015087 first-in-row">
+  <a id="project-image-5015087" class="project-image cfix" href="/138290/5015087/work/wendy-benjamin">
+    
+  <!-- start cover effect spans -->
+  <span class="project-image-dummy display-block project-image-image-overlay constrain-to-image overflow-hidden">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/21530141/2-2320596-2-243x185-87511c3e230d6649ca614e912f1de2e3.png" class="project-image-on" />
+  </span>
+  <span class="project-image-dummy display-block project-image-color-overlay constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-stroke constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-box-shadow constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-gradient-overlay constrain-to-image"></span>
+  <!-- end cover effect spans -->
+    
+  <span class="overflow-hidden project-image-inner display-block">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/21530141/2-2320596-1-243x185-e905bb7c047573ef221ab9873ceb4386.png" class="project-image-off" />
+    <span class="project-info-dummy constrain-to-image display-block"></span>
+  </span>
+  
+</a> <!-- .project-image -->
+
+<div class="project-title-wrap overflow-hidden constrain-to-image">
+  <a class="project-title" href="/138290/5015087/work/wendy-benjamin">Wendy & Benjamin</a>
+</div>
+
+<div class="project-description constrain-to-image">Graphics designed for my own wedding which include:<br />
+Invitations, envelope liners, address stickers, menus, name cards, table numbers and seating chart.</div>
+<div class="project-fields constrain-to-image">Graphic Design</div>
+<div class="project-published constrain-to-image">2014</div>
+</li><li id="project-cover-5765697" class="left project-cover project-cover-5765697">
+  <a id="project-image-5765697" class="project-image cfix" href="/138290/5765697/work/my-branding">
+    
+  <!-- start cover effect spans -->
+  <span class="project-image-dummy display-block project-image-image-overlay constrain-to-image overflow-hidden">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/23452089/2-2320596-2-243x185-1a5fd4a7e34c95afd397c522f6deb831.png" class="project-image-on" />
+  </span>
+  <span class="project-image-dummy display-block project-image-color-overlay constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-stroke constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-box-shadow constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-gradient-overlay constrain-to-image"></span>
+  <!-- end cover effect spans -->
+    
+  <span class="overflow-hidden project-image-inner display-block">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/23452089/2-2320596-1-243x185-9a08c037ca10222727a8e2da5ba499ef.png" class="project-image-off" />
+    <span class="project-info-dummy constrain-to-image display-block"></span>
+  </span>
+  
+</a> <!-- .project-image -->
+
+<div class="project-title-wrap overflow-hidden constrain-to-image">
+  <a class="project-title" href="/138290/5765697/work/my-branding">My Branding</a>
+</div>
+
+<div class="project-description constrain-to-image">Personal Branding</div>
+<div class="project-fields constrain-to-image">Art Direction, Branding, Graphic Design</div>
+<div class="project-published constrain-to-image">2015</div>
+</li><li id="project-cover-992546" class="left project-cover project-cover-992546 last-in-row">
+  <a id="project-image-992546" class="project-image cfix" href="/138290/992546/work/my-logo-collection">
+    
+  <!-- start cover effect spans -->
+  <span class="project-image-dummy display-block project-image-image-overlay constrain-to-image overflow-hidden">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/6517063/2-2320596-2-243x185-9c996ef691cd5a4c404bc39b34ed4ef5.png" class="project-image-on" />
+  </span>
+  <span class="project-image-dummy display-block project-image-color-overlay constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-stroke constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-box-shadow constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-gradient-overlay constrain-to-image"></span>
+  <!-- end cover effect spans -->
+    
+  <span class="overflow-hidden project-image-inner display-block">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/6517063/2-2320596-1-243x185-078bb40b3c994bccbfe2096d8249a64d.png" class="project-image-off" />
+    <span class="project-info-dummy constrain-to-image display-block"></span>
+  </span>
+  
+</a> <!-- .project-image -->
+
+<div class="project-title-wrap overflow-hidden constrain-to-image">
+  <a class="project-title" href="/138290/992546/work/my-logo-collection">My Logo Collection</a>
+</div>
+
+<div class="project-description constrain-to-image">Collection of Logos designed for my clients</div>
+<div class="project-fields constrain-to-image">Branding, Graphic Design</div>
+<div class="project-published constrain-to-image">2013</div>
+</li><li id="project-cover-992553" class="left project-cover project-cover-992553 first-in-row">
+  <a id="project-image-992553" class="project-image cfix" href="/138290/992553/work/susan-toyne-branding">
+    
+  <!-- start cover effect spans -->
+  <span class="project-image-dummy display-block project-image-image-overlay constrain-to-image overflow-hidden">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/5711693/2-2320596-2-243x185-33c24feffbebe655e07c0ed9cd4d542b.png" class="project-image-on" />
+  </span>
+  <span class="project-image-dummy display-block project-image-color-overlay constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-stroke constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-box-shadow constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-gradient-overlay constrain-to-image"></span>
+  <!-- end cover effect spans -->
+    
+  <span class="overflow-hidden project-image-inner display-block">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/5711693/2-2320596-1-243x185-9c56b5e2f00e484c8e4895bff440d12c.png" class="project-image-off" />
+    <span class="project-info-dummy constrain-to-image display-block"></span>
+  </span>
+  
+</a> <!-- .project-image -->
+
+<div class="project-title-wrap overflow-hidden constrain-to-image">
+  <a class="project-title" href="/138290/992553/work/susan-toyne-branding">Susan Toyne Branding</a>
+</div>
+
+<div class="project-description constrain-to-image">Branding project for Susan Toyne, Real Estate agent at Royal LePage, Johnston & Daniel.</div>
+<div class="project-fields constrain-to-image">Branding, Editorial Design, Graphic Design</div>
+<div class="project-published constrain-to-image">2012</div>
+</li><li id="project-cover-992552" class="left project-cover project-cover-992552">
+  <a id="project-image-992552" class="project-image cfix" href="/138290/992552/work/maria-brooks-branding">
+    
+  <!-- start cover effect spans -->
+  <span class="project-image-dummy display-block project-image-image-overlay constrain-to-image overflow-hidden">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/5711383/2-2320596-2-243x185-8dc8cb9c2d0ad1b2adfa9e3ceebc42a9.png" class="project-image-on" />
+  </span>
+  <span class="project-image-dummy display-block project-image-color-overlay constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-stroke constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-box-shadow constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-gradient-overlay constrain-to-image"></span>
+  <!-- end cover effect spans -->
+    
+  <span class="overflow-hidden project-image-inner display-block">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/5711383/2-2320596-1-243x185-b1ceb5abb2d3bf8cc805b0b31919fd30.png" class="project-image-off" />
+    <span class="project-info-dummy constrain-to-image display-block"></span>
+  </span>
+  
+</a> <!-- .project-image -->
+
+<div class="project-title-wrap overflow-hidden constrain-to-image">
+  <a class="project-title" href="/138290/992552/work/maria-brooks-branding">Maria Brooks Branding</a>
+</div>
+
+<div class="project-description constrain-to-image">Maria Brooks is a Real Estate agent at Royal LePage, Johnston & Daniel Division. I worked on her branding and created different marketing materials for her including brochures & promotional cards</div>
+<div class="project-fields constrain-to-image">Branding, Editorial Design, Graphic Design</div>
+<div class="project-published constrain-to-image">2012</div>
+</li><li id="project-cover-992551" class="left project-cover project-cover-992551 last-in-row">
+  <a id="project-image-992551" class="project-image cfix" href="/138290/992551/work/dd-branding">
+    
+  <!-- start cover effect spans -->
+  <span class="project-image-dummy display-block project-image-image-overlay constrain-to-image overflow-hidden">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/5711085/2-2320596-2-243x185-e761e7fed70b4559c1952e6316832c0f.png" class="project-image-on" />
+  </span>
+  <span class="project-image-dummy display-block project-image-color-overlay constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-stroke constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-box-shadow constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-gradient-overlay constrain-to-image"></span>
+  <!-- end cover effect spans -->
+    
+  <span class="overflow-hidden project-image-inner display-block">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/5711085/2-2320596-1-243x185-88259318c442c1419ae00040ab7f7131.png" class="project-image-off" />
+    <span class="project-info-dummy constrain-to-image display-block"></span>
+  </span>
+  
+</a> <!-- .project-image -->
+
+<div class="project-title-wrap overflow-hidden constrain-to-image">
+  <a class="project-title" href="/138290/992551/work/dd-branding">D.D. Branding</a>
+</div>
+
+<div class="project-description constrain-to-image">Logo, brochures and other marketing materials for Real Estate purpose.</div>
+<div class="project-fields constrain-to-image">Branding, Editorial Design, Graphic Design</div>
+<div class="project-published constrain-to-image">2012</div>
+</li><li id="project-cover-992549" class="left project-cover project-cover-992549 first-in-row">
+  <a id="project-image-992549" class="project-image cfix" href="/138290/992549/work/rlp-johnston-daniel-division-brokerage">
+    
+  <!-- start cover effect spans -->
+  <span class="project-image-dummy display-block project-image-image-overlay constrain-to-image overflow-hidden">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/6107247/2-2320596-2-243x185-de3a0373a6de2bc0ffaed11dd90c9bb8.png" class="project-image-on" />
+  </span>
+  <span class="project-image-dummy display-block project-image-color-overlay constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-stroke constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-box-shadow constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-gradient-overlay constrain-to-image"></span>
+  <!-- end cover effect spans -->
+    
+  <span class="overflow-hidden project-image-inner display-block">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/6107247/2-2320596-1-243x185-d5290f525b428dadc34cbae825486e29.png" class="project-image-off" />
+    <span class="project-info-dummy constrain-to-image display-block"></span>
+  </span>
+  
+</a> <!-- .project-image -->
+
+<div class="project-title-wrap overflow-hidden constrain-to-image">
+  <a class="project-title" href="/138290/992549/work/rlp-johnston-daniel-division-brokerage">RLP Johnston & Daniel Division, Brokerage</a>
+</div>
+
+<div class="project-description constrain-to-image">Website redesign done for Johnston & Daniel, Real Estate company + other marketing materials</div>
+<div class="project-fields constrain-to-image">Branding, Graphic Design, Web Design</div>
+<div class="project-published constrain-to-image">2012</div>
+</li><li id="project-cover-3718014" class="left project-cover project-cover-3718014">
+  <a id="project-image-3718014" class="project-image cfix" href="/138290/3718014/work/the-fit-perspective">
+    
+  <!-- start cover effect spans -->
+  <span class="project-image-dummy display-block project-image-image-overlay constrain-to-image overflow-hidden">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/18110729/2-2320596-2-243x185-94ff8ac05e7d381b466b713f59e70a13.png" class="project-image-on" />
+  </span>
+  <span class="project-image-dummy display-block project-image-color-overlay constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-stroke constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-box-shadow constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-gradient-overlay constrain-to-image"></span>
+  <!-- end cover effect spans -->
+    
+  <span class="overflow-hidden project-image-inner display-block">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/18110729/2-2320596-1-243x185-4bef6134721b14554ec513e10c8c7a0f.png" class="project-image-off" />
+    <span class="project-info-dummy constrain-to-image display-block"></span>
+  </span>
+  
+</a> <!-- .project-image -->
+
+<div class="project-title-wrap overflow-hidden constrain-to-image">
+  <a class="project-title" href="/138290/3718014/work/the-fit-perspective">The Fit Perspective</a>
+</div>
+
+<div class="project-description constrain-to-image">Logo design and marketing materials created for a GoodLife personal trainer</div>
+<div class="project-fields constrain-to-image">Branding, Graphic Design</div>
+<div class="project-published constrain-to-image">2014</div>
+</li><li id="project-cover-1128544" class="left project-cover project-cover-1128544 last-in-row">
+  <a id="project-image-1128544" class="project-image cfix" href="/138290/1128544/work/my-logo">
+    
+  <!-- start cover effect spans -->
+  <span class="project-image-dummy display-block project-image-image-overlay constrain-to-image overflow-hidden">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/7330093/2-2320596-2-243x185-e29dcb124302a79464328df24dd8c089.png" class="project-image-on" />
+  </span>
+  <span class="project-image-dummy display-block project-image-color-overlay constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-stroke constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-box-shadow constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-gradient-overlay constrain-to-image"></span>
+  <!-- end cover effect spans -->
+    
+  <span class="overflow-hidden project-image-inner display-block">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/7330093/2-2320596-1-243x185-22488d87905e3ebaaf641a18a34b4b64.png" class="project-image-off" />
+    <span class="project-info-dummy constrain-to-image display-block"></span>
+  </span>
+  
+</a> <!-- .project-image -->
+
+<div class="project-title-wrap overflow-hidden constrain-to-image">
+  <a class="project-title" href="/138290/1128544/work/my-logo">My Logo</a>
+</div>
+
+<div class="project-description constrain-to-image">My personal logo</div>
+<div class="project-fields constrain-to-image">Branding, Calligraphy, Graphic Design</div>
+<div class="project-published constrain-to-image">2013</div>
+</li><li id="project-cover-6276391" class="left project-cover project-cover-6276391 first-in-row">
+  <a id="project-image-6276391" class="project-image cfix" href="/138290/6276391/work/alexandre">
+    
+  <!-- start cover effect spans -->
+  <span class="project-image-dummy display-block project-image-image-overlay constrain-to-image overflow-hidden">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/25030353/2-2320596-2-243x185-52eeedf316ff509dbbbc7e11ae393b08.png" class="project-image-on" />
+  </span>
+  <span class="project-image-dummy display-block project-image-color-overlay constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-stroke constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-box-shadow constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-gradient-overlay constrain-to-image"></span>
+  <!-- end cover effect spans -->
+    
+  <span class="overflow-hidden project-image-inner display-block">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/25030353/2-2320596-1-243x185-6f8c4e4540a9218c922925d220f7d535.png" class="project-image-off" />
+    <span class="project-info-dummy constrain-to-image display-block"></span>
+  </span>
+  
+</a> <!-- .project-image -->
+
+<div class="project-title-wrap overflow-hidden constrain-to-image">
+  <a class="project-title" href="/138290/6276391/work/alexandre">Alexandre</a>
+</div>
+
+<div class="project-description constrain-to-image">Announcement card & poster design created for the birth of my nephew</div>
+<div class="project-fields constrain-to-image">Graphic Design, Typography</div>
+<div class="project-published constrain-to-image">2015</div>
+</li><li id="project-cover-992550" class="left project-cover project-cover-992550">
+  <a id="project-image-992550" class="project-image cfix" href="/138290/992550/work/suzy-armanini">
+    
+  <!-- start cover effect spans -->
+  <span class="project-image-dummy display-block project-image-image-overlay constrain-to-image overflow-hidden">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/6092465/2-2320596-2-243x185-ec221e1ad356311696dbdab2bc009895.png" class="project-image-on" />
+  </span>
+  <span class="project-image-dummy display-block project-image-color-overlay constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-stroke constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-box-shadow constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-gradient-overlay constrain-to-image"></span>
+  <!-- end cover effect spans -->
+    
+  <span class="overflow-hidden project-image-inner display-block">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/6092465/2-2320596-1-243x185-46c5566b1522187b50793b0a3abae307.png" class="project-image-off" />
+    <span class="project-info-dummy constrain-to-image display-block"></span>
+  </span>
+  
+</a> <!-- .project-image -->
+
+<div class="project-title-wrap overflow-hidden constrain-to-image">
+  <a class="project-title" href="/138290/992550/work/suzy-armanini">Suzy Armanini</a>
+</div>
+
+<div class="project-description constrain-to-image">Logo Design and branding for Suzy Armanini, Real Estate Agent at Johnston & Daniel Division.</div>
+<div class="project-fields constrain-to-image">Branding, Graphic Design</div>
+<div class="project-published constrain-to-image">2012</div>
+</li><li id="project-cover-992554" class="left project-cover project-cover-992554 last-in-row">
+  <a id="project-image-992554" class="project-image cfix" href="/138290/992554/work/toronto-snow-globe">
+    
+  <!-- start cover effect spans -->
+  <span class="project-image-dummy display-block project-image-image-overlay constrain-to-image overflow-hidden">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/5711525/2-2320596-2-243x185-6dcf75177c06dfb54951493baf3463bb.png" class="project-image-on" />
+  </span>
+  <span class="project-image-dummy display-block project-image-color-overlay constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-stroke constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-box-shadow constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-gradient-overlay constrain-to-image"></span>
+  <!-- end cover effect spans -->
+    
+  <span class="overflow-hidden project-image-inner display-block">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/5711525/2-2320596-1-243x185-3c025397a9b78a056be479b8700c14cc.png" class="project-image-off" />
+    <span class="project-info-dummy constrain-to-image display-block"></span>
+  </span>
+  
+</a> <!-- .project-image -->
+
+<div class="project-title-wrap overflow-hidden constrain-to-image">
+  <a class="project-title" href="/138290/992554/work/toronto-snow-globe">Toronto Snow Globe</a>
+</div>
+
+<div class="project-description constrain-to-image">Card & Poster Design done for Susan Toyne, Real Estate agent at Royal LePage, Johnston & Daniel.</div>
+<div class="project-fields constrain-to-image">Advertising, Graphic Design</div>
+<div class="project-published constrain-to-image">2012</div>
+</li><li id="project-cover-992548" class="left project-cover project-cover-992548 first-in-row">
+  <a id="project-image-992548" class="project-image cfix" href="/138290/992548/work/or-real-estate">
+    
+  <!-- start cover effect spans -->
+  <span class="project-image-dummy display-block project-image-image-overlay constrain-to-image overflow-hidden">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/6461385/2-2320596-2-243x185-cb6bf7d58e70edd189535b6bcf071db3.png" class="project-image-on" />
+  </span>
+  <span class="project-image-dummy display-block project-image-color-overlay constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-stroke constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-box-shadow constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-gradient-overlay constrain-to-image"></span>
+  <!-- end cover effect spans -->
+    
+  <span class="overflow-hidden project-image-inner display-block">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/6461385/2-2320596-1-243x185-b31d32a6422ff127ca661f60e926848d.png" class="project-image-off" />
+    <span class="project-info-dummy constrain-to-image display-block"></span>
+  </span>
+  
+</a> <!-- .project-image -->
+
+<div class="project-title-wrap overflow-hidden constrain-to-image">
+  <a class="project-title" href="/138290/992548/work/or-real-estate">OR Real Estate</a>
+</div>
+
+<div class="project-description constrain-to-image">Logo Design for Joe Robert & Gillian Oxley, Real Estate Agents at Johnston & Daniel Division, Brokerage</div>
+<div class="project-fields constrain-to-image">Branding, Graphic Design</div>
+<div class="project-published constrain-to-image">2012</div>
+</li><li id="project-cover-992555" class="left project-cover project-cover-992555">
+  <a id="project-image-992555" class="project-image cfix" href="/138290/992555/work/cj-realty-corp">
+    
+  <!-- start cover effect spans -->
+  <span class="project-image-dummy display-block project-image-image-overlay constrain-to-image overflow-hidden">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/6092599/2-2320596-2-243x185-a33e7b190fcb636ce12e86bcf068b1d1.png" class="project-image-on" />
+  </span>
+  <span class="project-image-dummy display-block project-image-color-overlay constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-stroke constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-box-shadow constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-gradient-overlay constrain-to-image"></span>
+  <!-- end cover effect spans -->
+    
+  <span class="overflow-hidden project-image-inner display-block">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/6092599/2-2320596-1-243x185-5d7953f8a2204cb4da3296cc795bc914.png" class="project-image-off" />
+    <span class="project-info-dummy constrain-to-image display-block"></span>
+  </span>
+  
+</a> <!-- .project-image -->
+
+<div class="project-title-wrap overflow-hidden constrain-to-image">
+  <a class="project-title" href="/138290/992555/work/cj-realty-corp">CJ Realty Corp</a>
+</div>
+
+<div class="project-description constrain-to-image">Logo Design and Business Card design for CJ Real Estate</div>
+<div class="project-fields constrain-to-image">Branding, Graphic Design</div>
+<div class="project-published constrain-to-image">2012</div>
+</li><li id="project-cover-992547" class="left project-cover project-cover-992547 last-in-row">
+  <a id="project-image-992547" class="project-image cfix" href="/138290/992547/work/kim-valberg">
+    
+  <!-- start cover effect spans -->
+  <span class="project-image-dummy display-block project-image-image-overlay constrain-to-image overflow-hidden">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/6461571/2-2320596-2-243x185-6ee90371e929b88a8a56043f723a98fc.png" class="project-image-on" />
+  </span>
+  <span class="project-image-dummy display-block project-image-color-overlay constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-stroke constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-box-shadow constrain-to-image"></span>
+  <span class="project-image-dummy display-block project-image-gradient-overlay constrain-to-image"></span>
+  <!-- end cover effect spans -->
+    
+  <span class="overflow-hidden project-image-inner display-block">
+    <img src="https://m1.behance.net/profiles16/1768755/prosite/projects/6461571/2-2320596-1-243x185-b206a7f58c19448a5208b5d40c854aa8.png" class="project-image-off" />
+    <span class="project-info-dummy constrain-to-image display-block"></span>
+  </span>
+  
+</a> <!-- .project-image -->
+
+<div class="project-title-wrap overflow-hidden constrain-to-image">
+  <a class="project-title" href="/138290/992547/work/kim-valberg">Kim Valberg</a>
+</div>
+
+<div class="project-description constrain-to-image">Logo Design for Kim Valberg, Real Estate Agent at Johnston & Daniel.</div>
+<div class="project-fields constrain-to-image">Branding, Graphic Design</div>
+<div class="project-published constrain-to-image">2012</div>
+</li><!-- thumbnails appear here -->
+</ul>
+
+</div>
+
+<div id="below-bottom"></div>
+<div id="basic-footer-group">
+<div id="basic-footer-container">
+  <div id="basic-footer" class="footer-text">
+    <span>All works &copy; Benjamin Gehlen 2012.<br />
+Please do not reproduce without the expressed written consent of Benjamin Gehlen. Powered by ProSite.</span>
+  </div> <!-- #basic-footer -->
+</div> <!-- #basic-footer-container -->
+</div> <!-- #basic-footer-group -->
+</div><!-- .sort-group -->
+  </div> <!-- #primary-content -->
+
+</div> <!-- #primary-content-wrap -->
+
+<div id="follow-behance-container" class="show location-2">
+<a class="form-button form-button-follow-on" target="_blank" href="https://www.behance.net/follow/1768755">FOLLOW ON <b>B&#275;hance</b></a>
+<div class="follow-behance-background ui-corner"></div>
+</div> </div><!-- .sort-group -->
+  
+</div> <!-- #site-container -->
+
+    
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"926bef25e7","applicationID":"12024645","transactionName":"YwRUYkIFC0pQBUNbWVpOY0RZSwxXVQNPHEZcEQ==","queueTime":0,"applicationTime":48,"atts":"T0NXFAofGEQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>
